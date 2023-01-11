@@ -1,0 +1,182 @@
+[
+  {
+    "name" : "La Brasserie Restaurant",
+    "description" : "Satisfy your cravings with a lavish buffet of delicious international cuisine and Asian selections at La Brasserie, our central Jakarta hotel's popular restaurant featuring à la carte specialties throughout the day.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/26/71/c9/a0/newly-renovated.jpg",
+    "address" : "Jl. Jendral Sudirman Kav. 18-20 Le Méridien, Jakarta 10220 Indonesia",
+    "rating" : 5.0,
+    "menu" : [
+      {
+        "name" : "Seafood Extravaganza",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/10/a9/a1/b6/seafood-extravaganza.jpg",
+        "price" :"IDR 156,000 - IDR 781,000"
+      },
+      {
+        "name" : "Flavours of Chine",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/12/00/d2/8e/flavours-of-china.jpg",
+        "price" :"IDR 221,000 - IDR 302,000"
+      },
+      {
+        "name" : "Festive Menu",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-w/21/65/80/a6/festive-menu.jpg",
+        "price" :"IDR 132,000 - IDR 203,000"
+      },
+      {
+        "name" : "Dishes",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/12/00/d1/86/dishes.jpg",
+        "price" :"IDR 70,000 - IDR 150,000"
+      },
+      {
+        "name" : "Chocoholics",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/12/54/7b/4d/chocoholics.jpg",
+        "price" :"IDR 35,000 - IDR 300,000"
+      },
+      {
+        "name" : "Dessert",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/12/00/d1/33/dessert.jpg",
+        "price" :"IDR 90,000 - IDR 180,000"
+      }
+    ]
+  },
+  {
+    "name" : "Rasa Restaurant",
+    "description" : "Located next to our swimming pool, Rasa, meaning \"taste\" in Bahasa, blends European and Asian influences to create a casual dining experience with a higher level of creativity. An open kitchen with live cooking station showcases cuisine from around the world along with local favorites. Enjoy a contemporary open market atmosphere, set against an elegant backdrop of rich hardwoods, gleaming silver and soothing stone.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/0d/b3/81/b8/rasa-restaurant-dining.jpg",
+    "address" : "Jl Jend. Sudirman Kav. 10 - 11 AYANA Midplaza, JAKARTA Level 2, Jakarta 10220 Indonesia",
+    "rating" : 4.5,
+    "menu" : [
+      {
+        "name" : "Brunch Buffet",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-w/0e/e9/1d/82/photo7jpg.jpg",
+        "price" :"IDR 100,000 - IDR 230,000"
+      },
+      {
+        "name" : "Seafood",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/09/42/96/08/rasa-restaurant.jpg",
+        "price" :"IDR 150,000 - IDR 300,000"
+      }
+    ]
+  },
+  {
+    "name" : "Pidari Lounge",
+    "description" : "Embracing and blending in with its natural surroundings, Pidari Lounge is a laid-back, chic and cozy venue, featuring a combination of Indonesian and Western comfort dishes, hearty quick-eats, and exquisite drinks.\n",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-p/1a/b2/bb/98/getlstd-property-photo.jpg",
+    "address" : "Jl. Jend. Sudirman Kav. 54-55 Hutan Kota Plataran, Jakarta 12190 Indonesia",
+    "rating" : 5.0,
+    "menu" : [
+      {
+        "name" : "F&B",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/1c/5c/32/18/photo8jpg.jpg",
+        "price" :"IDR 189,000 - IDR 781,000"
+      }
+    ]
+  },
+  {
+    "name" : "Al Nafoura Lebanese Restaurant",
+    "description" : "Savor a melting pot of Middle Eastern cuisine prepared with rich, Lebanese flavors followed by a relaxing sisha at Al Nafoura Lebanese Restaurant. Enjoy dining in the warm, colorful ambiance with authentic music for a truly magical experience in Jakarta.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-o/0a/6f/33/4f/al-nafoura.jpg",
+    "address" : "Jl. Jendral Sudirman 18 - 20 Lobby Level Hotel Le Meridien, Jakarta 10220 Indonesia",
+    "rating" : 5,
+    "menu" : [
+      {
+        "name" : "Lebanese",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/21/5e/e5/9e/harouf-ouzi.jpg",
+        "price" :"IDR 105,000 - IDR 320,000"
+      },
+      {
+        "name" : "Middle Eastern",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/21/5e/e5/59/batata-harra.jpg",
+        "price" :"IDR 190,000 - IDR 480,000"
+      }
+    ]
+  },
+  {
+    "name" : "JimBARan Lounge",
+    "description" : "Avoid after-work traffic and head straight to JimBARan Lounge instead, where our lovely open-air terrace and stunning indoor bar promise hours of relaxed dining. The chic ambiance is enhanced with soothing waterways and contemporary seating pods, surrounded by manicured gardens and fairy-tale lighting. It is the perfect space to have spontaneous meet-ups with friends and associates after work and on weekends. Enjoy the freshest seasonal ingredients and creative cocktail pairings accompanied by tastefully composed lounge music to set the mood.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/21/50/9d/51/jimbaran-lounge-outdoor.jpg",
+    "address" : "Jl. Jend. Sudirman Kav. 10-11 AYANA Midplaza JAKARTA Lobby Level, Jakarta 10220 Indonesia",
+    "rating" : 5,
+    "menu" : [
+      {
+        "name" : "Classic Djamoe",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-w/21/50/9e/93/classic-djamoe.jpg",
+        "price" :"IDR 90,000 - IDR 190,000"
+      },
+      {
+        "name" : "Meals",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/1b/f1/03/ea/20200905-164542-largejpg.jpg",
+        "price" :"IDR 40,000 - IDR 130,000"
+      }
+    ]
+  },
+  {
+    "name" : "Signatures Restaurant",
+    "description" : "A true culinary journey for every occasion, all day. Signatures Restaurant unveils a warm and welcoming ambiance, whether you are there for breakfast, lunch or dinner. Indonesia's first president graces the walls as you reminisce and savour that legendary Bubur Ayam HI. Watch the restaurant come alive with buffets and open show kitchens. Western, Asian, International and best European bakery products.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/1a/ba/bd/52/signatures-new-interior.jpg",
+    "address" : "Jl. MH. Thamrin no. 1 Hotel Indonesia Kempinski Jakarta, Jakarta Indonesia",
+    "rating" : 5,
+    "menu" : [
+      {
+        "name" : "Culinary",
+        "image" : "Jl. MH. Thamrin no. 1 Hotel Indonesia Kempinski Jakarta, Jakarta Indonesia",
+        "price" :"IDR 70,000 - IDR 280,000"
+      }
+    ]
+  },
+  {
+    "name" : "KALTURE Progressive Cafe & Resto",
+    "description" : "Holistic Home Food -a dynamic culinary fusion with home-style recipes. Multi Cuisine -Authentic and Fusion Indian, we offer select Italian, Japanese, Korean and Indonesian Cuisine, delicately fresh cooked to the international community of south Jakarta. We don't use MSG, Sugar or other oils except for Olive and Vegetable Oils. Food is mildly spicy, with many choices for non-spicy food. Families with kids welcome. Non Smoking.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d8/2f/a7/green-scenic-outdoor.jpg",
+    "address" : "Jl Pangeran Antasari Main Entrance Executive Paradise, Cilandak, Jakarta 12430 Indonesia",
+    "rating" : 5,
+    "menu" : [
+      {
+        "name" : "Indian Food",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/13/d8/30/0e/green-wrap-chicken-or.jpg",
+        "price" :"IDR 190,000 - IDR 290,000"
+      }
+    ]
+  },
+  {
+    "name" : "Bandar Djakarta Ancol",
+    "description" : "The seafood restaurant which has their own fish market. You can choose a lot of seafood variant which can be cooked with own specialities, either grill, fried, steam or simply boiled to taste the freshness.The concept is outdoor, with scenic seaview in Ancol, and Natural Garden in Alam Sutera Tangerang. Bandar Djakarta is not only about Fresh Food, Fair Price, Fast and Friendly services but also about enjoying culinary experience with natural ambience..",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-w/02/5d/30/23/bandar-djakarta-seaside.jpg",
+    "address" : "Jl. Pantai Sanur VI Taman Impian Jaya Ancol, Jakarta 14430 Indonesia",
+    "rating" : 4.5,
+    "menu" : [
+      {
+        "name" : "Seafood",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/10/2b/fc/b8/crab-with-butter-garlic.jpg",
+        "price" :"IDR 290,000 - IDR 1,990,000"
+      }
+    ]
+  },
+  {
+    "name" : "Patio Venue & Dining",
+    "description" : "Located in South Jakarta’s upscale residential district of Kebayoran Baru, Patio Venue & Dining offers an exclusive dining environment for savoring casual Asian and Western dishes– classic flavors exquisitely presented for the most discerning palates. Tastefully designed in modern European style, with private dining rooms, and a stylish bar and lounge, Patio Venue & Dining provides a cozy setting for a romantic dinner, a family celebration or business lunch, and has become a favorite of many Indonesian celebrities and lifestyle enthusiasts. Besides offering a lively dining ambiance, Patio Venue & Dining also brings a touch of sophistication to private functions and events, from cocktail parties",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/12/50/4d/a3/patio-venue-dining.jpg",
+    "address" : "Jln. Wijaya XIII no. 45 Panglima Polim, Jakarta 12160 Indonesia",
+    "rating" : 5,
+    "menu" : [
+      {
+        "name" : "Patio Menu",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-p/13/dd/36/62/patio-menu.jpg",
+        "price" :"IDR 110,000 - IDR 380,000"
+      }
+    ]
+  },
+  {
+    "name" : "Plataran Tiga Dari",
+    "description" : "Hutan Kota by Plataran integrates fundamental concepts that are core to Plataran’s identity; the celebration of Indonesia’s natural, cultural and culinary heritage. Hutan Kota Plataran comprises three main areas, each of which has been carefully and thoughtfully designed: Plataran Tiga Dari; Rumah Kaca Melati; and Pidari Coffee Lounge – with its own rooftop.",
+    "image" : "https://media-cdn.tripadvisor.com/media/photo-s/1a/5b/79/4c/getlstd-property-photo.jpg",
+    "address" : "Jl. Jend. Sudirman Kav. 54-55 Hutan Kota Plataran, Jakarta 12190 Indonesia",
+    "rating" : 4.5,
+    "menu" : [
+      {
+        "name" : "Lunch",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-o/1c/a3/fa/75/plataran-tiga-dari.jpg",
+        "price" :"IDR 130,000 - IDR 290,000"
+      }
+    ]
+  }
+]
