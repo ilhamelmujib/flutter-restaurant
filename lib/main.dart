@@ -18,8 +18,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(elevation: 0),
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+              primary: primaryColor,
+              onPrimary: Colors.black,
+              secondary: secondaryColor,
+            ),
         textTheme: textTheme,
+        appBarTheme: const AppBarTheme(elevation: 0),
       ),
       home: const ListPage(),
       routes: {

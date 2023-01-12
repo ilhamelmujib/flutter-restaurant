@@ -10,7 +10,10 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Restaurant"),
+        title: const Text(
+          "Restaurant",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
       ),
       body: FutureBuilder<String>(
         future: DefaultAssetBundle.of(context)
@@ -18,6 +21,7 @@ class ListPage extends StatelessWidget {
         builder: (context, snapshot) {
           final List<Restaurant> restaurants = parseRestaurant(snapshot.data);
           return ListView.builder(
+              padding: const EdgeInsets.all(10),
               itemCount: restaurants.length,
               itemBuilder: (context, index) {
                 return _buildItem(context, restaurants[index]);
@@ -29,58 +33,103 @@ class ListPage extends StatelessWidget {
 }
 
 Widget _buildItem(BuildContext context, Restaurant restaurant) {
-  return Material(
-    child: ListTile(
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 16.0,
-        vertical: 8.0,
-      ),
-      leading: Hero(
-        tag: restaurant.image,
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            Material(
-              borderRadius: BorderRadius.circular(10),
-              clipBehavior: Clip.antiAlias,
-              child: Image.network(
-                restaurant.image,
-                width: 120,
-                fit: BoxFit.fitWidth,
+  return InkWell(
+    onTap: () {
+      Navigator.pushNamed(context, DetailPage.routeName, arguments: restaurant);
+    },
+    child: Container(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Hero(
+            tag: restaurant.image,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Material(
+                    borderRadius: BorderRadius.circular(10),
+                    clipBehavior: Clip.antiAlias,
+                    child: ConstrainedBox(
+                      constraints:
+                          const BoxConstraints(minHeight: 100, maxWidth: 100),
+                      child: Image.network(
+                        restaurant.image,
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    )),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Material(
+                    color: Colors.white,
+                    elevation: 5,
+                    borderRadius: BorderRadius.circular(10),
+                    clipBehavior: Clip.antiAlias,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 7, vertical: 2),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            color: Colors.orange,
+                            size: 15,
+                          ),
+                          const SizedBox(
+                            width: 3,
+                          ),
+                          Text(restaurant.rating.toString())
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Flexible(
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    restaurant.name,
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.location_on,
+                        color: Colors.grey,
+                        size: 15,
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Flexible(
+                        child: Text(
+                          restaurant.address,
+                          maxLines: 1,
+                          style: const TextStyle(color: Colors.grey),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-            Material(
-              color: Colors.white,
-              elevation: 5,
-              borderRadius: BorderRadius.circular(10),
-              clipBehavior: Clip.antiAlias,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.orange,
-                      size: 15,
-                    ),
-                    const SizedBox(
-                      width: 3,
-                    ),
-                    Text(restaurant.rating.toString())
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
+          ),
+        ],
       ),
-      title: Text(restaurant.name),
-      subtitle: Text(restaurant.address),
-      onTap: () {
-        Navigator.pushNamed(context, DetailPage.routeName,
-            arguments: restaurant);
-      },
     ),
   );
 }
