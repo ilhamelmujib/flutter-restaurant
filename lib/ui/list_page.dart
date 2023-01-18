@@ -19,13 +19,27 @@ class ListPage extends StatelessWidget {
         future: DefaultAssetBundle.of(context)
             .loadString("assets/restaurants.json"),
         builder: (context, snapshot) {
-          final List<Restaurant> restaurants = parseRestaurant(snapshot.data);
-          return ListView.builder(
-              padding: const EdgeInsets.all(10),
-              itemCount: restaurants.length,
-              itemBuilder: (context, index) {
-                return _buildItem(context, restaurants[index]);
-              });
+          if (snapshot.connectionState != ConnectionState.done) {
+            // loading widget
+            return const Center(child: CircularProgressIndicator());
+          } else {
+            if (snapshot.hasData) {
+              final List<Restaurant> restaurants =
+                  parseRestaurant(snapshot.data);
+              return ListView.builder(
+                  padding: const EdgeInsets.all(10),
+                  itemCount: restaurants.length,
+                  itemBuilder: (context, index) {
+                    return _buildItem(context, restaurants[index]);
+                  });
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text(snapshot.error.toString()),
+              );
+            } else {
+              return const Center(child: CircularProgressIndicator());
+            }
+          }
         },
       ),
     );
@@ -42,7 +56,7 @@ Widget _buildItem(BuildContext context, Restaurant restaurant) {
       child: Row(
         children: [
           Hero(
-            tag: restaurant.image,
+            tag: restaurant.pictureId!,
             child: Stack(
               alignment: Alignment.bottomCenter,
               children: [
@@ -53,7 +67,7 @@ Widget _buildItem(BuildContext context, Restaurant restaurant) {
                       constraints:
                           const BoxConstraints(minHeight: 100, maxWidth: 100),
                       child: Image.network(
-                        restaurant.image,
+                        restaurant.pictureId!,
                         width: 100,
                         height: 100,
                         fit: BoxFit.cover,
@@ -97,7 +111,7 @@ Widget _buildItem(BuildContext context, Restaurant restaurant) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    restaurant.name,
+                    restaurant.name!,
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                   ),
@@ -114,9 +128,9 @@ Widget _buildItem(BuildContext context, Restaurant restaurant) {
                       const SizedBox(
                         width: 5,
                       ),
-                      Flexible(
+                      Expanded(
                         child: Text(
-                          restaurant.address,
+                          restaurant.city!,
                           maxLines: 1,
                           style: const TextStyle(color: Colors.grey),
                           overflow: TextOverflow.ellipsis,

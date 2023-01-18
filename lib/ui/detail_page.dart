@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_restaurant/data/model/restaurant.dart';
 
-import '../data/model/menu.dart';
-
 class DetailPage extends StatelessWidget {
   static const routeName = '/detail';
 
@@ -28,9 +26,9 @@ class DetailPage extends StatelessWidget {
               backgroundColor: Colors.black,
               flexibleSpace: FlexibleSpaceBar(
                 background: Hero(
-                  tag: restaurant.image,
+                  tag: restaurant.pictureId!,
                   child: Image.network(
-                    restaurant.image,
+                    restaurant.pictureId!,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -44,7 +42,7 @@ class DetailPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: Text(restaurant.name),
+                  child: Text(restaurant.name!),
                 ),
                 titlePadding: const EdgeInsets.only(left: 16, bottom: 16),
               ),
@@ -59,12 +57,43 @@ class DetailPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(restaurant.description),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.location_on,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Flexible(
+                          child: Text(
+                            restaurant.city!,
+                            maxLines: 1,
+                            style: const TextStyle(color: Colors.grey),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
+                    ),
+                    Text(
+                      "Rating ${restaurant.rating!}",
+                      maxLines: 1,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(restaurant.description!),
+                    const SizedBox(
+                      height: 20,
                     ),
                     const Text(
-                      "Menu",
+                      "Makanan",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -74,15 +103,30 @@ class DetailPage extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    GridView.count(
-                      padding: const EdgeInsets.all(6),
-                      mainAxisSpacing: 16,
-                      crossAxisSpacing: 10,
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      crossAxisCount: 2,
-                      children: restaurant.menu.map((menu) {
-                        return _buildItem(context, menu);
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: restaurant.menus!.foods!.map((menu) {
+                        return _buildItem(context, menu!);
+                      }).toList(),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text(
+                      "Minuman",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: restaurant.menus!.drinks!.map((menu) {
+                        return _buildItem(context, menu!);
                       }).toList(),
                     )
                   ],
@@ -96,32 +140,11 @@ class DetailPage extends StatelessWidget {
   }
 }
 
-Widget _buildItem(BuildContext context, Menu menu) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      ClipRRect(
-        borderRadius: BorderRadius.circular(10),
-        child: Image.network(
-          menu.image,
-          fit: BoxFit.cover,
-          width: 400,
-          height: 140,
-        ),
-      ),
-      const SizedBox(
-        height: 10,
-      ),
-      Text(
-        menu.name,
-        style: const TextStyle(
-          fontSize: 16,
-        ),
-      ),
-      Text(
-        menu.price,
-        style: const TextStyle(fontSize: 12, color: Colors.grey),
-      ),
-    ],
+Widget _buildItem(BuildContext context, Food food) {
+  return Text(
+    "- ${food.name!}",
+    style: const TextStyle(
+      fontSize: 16,
+    ),
   );
 }
